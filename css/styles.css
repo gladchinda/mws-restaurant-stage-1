@@ -421,3 +421,114 @@ nav h1 a {
 #restaurant-hours td {
     color: #666;
 }
+
+
+/* ====================== Media Queries ====================== */
+
+@media screen and (min-aspect-ratio: 4/3) {
+    #map {
+        max-height: calc(100vmin - 80px);
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) and (max-height: 640px) {
+    #map {
+        height: calc(100vmax - 180px);
+        max-height: calc(100vmax - 180px);
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) and (max-height: 580px) {
+    #map {
+        height: 400px;
+        max-height: calc(100vmax - 180px);
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .filter-options {
+        flex-wrap: no-wrap;
+        justify-content: center;
+        min-height: 60px;
+    }
+    .filter-options h2 {
+        flex: 1;
+        margin-right: 0;
+    }
+    .filter-options select {
+        max-width: calc(37.5% - 30px);
+    }
+    .filter-options select:last-of-type {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    #restaurants-list li {
+        min-height: auto;
+        max-width: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        align-items: flex-start;
+        position: relative;
+    }
+    #restaurants-list .restaurant-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 40%;
+        min-width: 40%;
+        min-height: 100%;
+        max-height: 100%;
+    }
+    #restaurants-list li h1,
+    #restaurants-list p,
+    #restaurants-list li a {
+        position: relative;
+        left: 40%;
+        max-width: calc(60% - 60px);
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .filter-options select {
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #restaurants-list {
+        justify-content: flex-start;
+    }
+    #restaurants-list li {
+        width: calc(50% - 20px / 2);
+        max-width: none;
+        /* margin: 10px 0; */
+    }
+    #restaurants-list li:nth-child(2n+1) {
+        margin-right: 20px;
+    }
+    #restaurants-list .restaurant-img {
+        min-height: 240px;
+    }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1152px) {
+    #restaurants-list li {
+        width: calc(100% / 3 - 20px * 2 / 3);
+        max-width: none;
+    }
+    #restaurants-list li:nth-child(2n+1) {
+        margin-right: 0px;
+    }
+    #restaurants-list li:nth-child(3n+1),
+    #restaurants-list li:nth-child(3n+2) {
+        margin-right: 20px;
+    }
+}
